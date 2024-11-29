@@ -9,46 +9,47 @@ body, html {
 
 /* Gradients */
 .hero-gradient {
-  background: linear-gradient(135deg, #d18457, #ffd275, #d1d2d7, #848cd9); /* Peach to Yellow to Gray to Periwinkle */
+  background: linear-gradient(135deg, #848cd9, #d18457, #ffd275, #6c6585); /* Blue, Peach, Yellow, Muted Purple */
 }
 
 .section-gradient {
-  background: linear-gradient(135deg, #848cd9, #6c6585, #ffd275); /* Periwinkle to Muted Purple to Yellow */
+  background: linear-gradient(135deg, #848cd9, #6c6585, #d1d2d7); /* Periwinkle, Muted Purple, Light Gray */
 }
 
 .button-gradient {
-  background: linear-gradient(90deg, #ffd275, #d18457); /* Yellow to Peach */
+  background: linear-gradient(90deg, #6c6585, #848cd9); /* Purple to Blue */
   border: none;
   color: white;
   font-size: 16px;
   padding: 10px 20px;
   border-radius: 30px;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-color 0.3s;
 }
 
 .button-gradient:hover {
   transform: scale(1.05);
+  background: linear-gradient(90deg, #848cd9, #ffd275); /* Adds yellow as hover highlight */
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
   padding: 100px 20px;
-  color: #ffd275; /* Bright Yellow for hero text */
-  background: linear-gradient(180deg, #6c6585, #393548); /* Muted Purple to Dark Purple */
+  background: linear-gradient(180deg, #848cd9, #393548); /* Blue to Dark Purple */
+  color: #d1d2d7; /* Light Gray */
 }
 
 .hero h1 {
   font-size: 60px;
   font-weight: bold;
-  color: #ffd275; /* Bright Yellow */
+  color: #848cd9; /* Periwinkle */
 }
 
 .hero p {
   font-size: 20px;
   margin-top: 20px;
-  color: #d1d2d7; /* Light Gray */
+  color: #ffd275; /* Yellow as an accent for subtext */
 }
 
 /* Section Styling */
@@ -61,7 +62,7 @@ body, html {
 .section h2 {
   font-size: 40px;
   font-weight: bold;
-  background: linear-gradient(to right, #ffd275, #d18457);
+  background: linear-gradient(to right, #848cd9, #d18457); /* Periwinkle to Peach */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -72,9 +73,32 @@ body, html {
   margin: 20px auto;
 }
 
-.icon {
-  font-size: 60px;
-  color: #ffd275; /* Bright Yellow for icons */
+/* Features Section */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+}
+
+.features-grid .feature-card {
+  padding: 20px;
+  background: linear-gradient(135deg, #6c6585, #848cd9); /* Purple to Blue */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: #d1d2d7; /* Light Gray */
+  text-align: center;
+}
+
+.features-grid .feature-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+.features-grid .feature-card .icon {
+  font-size: 40px;
+  color: #ffd275; /* Yellow */
+  margin-bottom: 10px;
 }
 
 /* Comparison Table */
@@ -97,14 +121,14 @@ body, html {
 
 .comparison-table h3 {
   margin: 0;
-  color: #ffd275; /* Yellow */
+  color: #848cd9; /* Periwinkle */
   font-weight: bold;
 }
 
 /* FAQ Section */
 .faq {
   padding: 40px;
-  background: linear-gradient(45deg, #ffd275, #6c6585);
+  background: linear-gradient(45deg, #848cd9, #6c6585);
   color: #d1d2d7;
   border-radius: 20px;
 }
@@ -115,7 +139,7 @@ body, html {
 
 .faq-item h4 {
   margin-bottom: 10px;
-  color: #ffd275; /* Yellow */
+  color: #d18457; /* Peach */
 }
 
 .faq-item p {
@@ -131,7 +155,7 @@ body, html {
 }
 
 .footer a {
-  color: #ffd275; /* Yellow */
+  color: #d18457; /* Peach */
   text-decoration: none;
   font-weight: bold;
 }
