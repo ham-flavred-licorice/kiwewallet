@@ -1,7 +1,7 @@
 /* General Colors */
 :root {
     --primary-color: #4FC1E9; /* Aqua Blue */
-    --accent-color:  #04668D; /* pinkish */
+    --accent-color:  #04668D; /* Pinkish */
     --secondary-color: #5A1B9E; /* Deep Purple */
     --background-color: #2C2C2C; /* Charcoal Gray */
     --text-color: #FFFFFF; /* White */
@@ -9,14 +9,14 @@
 
 /* Base Styles */
 body, html {
-    margin: 0;
-    padding: 0;
+    margin: 2;
+    padding: 6;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
 }
 
 h1, h2 {
-    margin: 0;
+    margin: 3;
 }
 
 p {
@@ -25,7 +25,7 @@ p {
 
 /* Parallax Sections */
 .parallax {
-    height: 100vh;
+    height: 75vh;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -42,7 +42,7 @@ p {
 }
 
 .parallax#mission {
-    background-image: url('kiwe7.png'); /* Add your image */
+    background-image: url('k4.png'); /* Add your image */
 }
 
 .parallax#rewards {
@@ -50,13 +50,13 @@ p {
 }
 
 .parallax#faq {
-    background-image: url('k4.png'); /* Add your image */
+    background-image: url('Pasted Graphic 1.png'); /* Add your image */
 }
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .overlay h2, .overlay p {
@@ -77,7 +77,7 @@ p {
 
 ul {
     list-style-type: none;
-    padding: 0;
+    padding: 2;
 }
 
 ul li {
@@ -88,6 +88,6 @@ ul li {
 footer {
     background-color: var(--secondary-color);
     color: var(--text-color);
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 }
