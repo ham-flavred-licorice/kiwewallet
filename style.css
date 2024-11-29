@@ -1,22 +1,24 @@
 /* General Colors */
 :root {
-    --primary-color: #6A0DAD; /*  */
-    --accent-color: #04668D; /* Pinkish */
-    --secondary-color: #5A1B9E; /* Deep Purple */
-    --background-color: #2C2C2C; /* Charcoal Gray */
+    --primary-color: #6A0DAD; /* Primary color */
+    --accent-color: #04668D; /* Accent color */
+    --secondary-color: #5A1B9E; /* Secondary deep purple */
+    --background-color: #2C2C2C; /* Charcoal gray */
     --text-color: #FFFFFF; /* White */
 }
 
 /* Base Styles */
 body, html {
-    margin: 2;
-    padding: 4;
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 h1, h2 {
-    margin: 2;
+    margin: 20px 0;
 }
 
 p {
@@ -37,6 +39,13 @@ p {
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .parallax {
+        height: 50vh;
+        background-attachment: scroll;
+    }
+}
+
 .parallax#home {
     background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 }
@@ -55,8 +64,8 @@ p {
 
 .overlay {
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 15px;
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .overlay h2, .overlay p {
@@ -84,10 +93,48 @@ ul li {
     margin: 5px 0;
 }
 
+/* Feature Cards */
+.feature {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    color: var(--accent-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+}
+
 /* Footer */
 footer {
     background-color: var(--secondary-color);
     color: var(--text-color);
-    padding: 10px;
+    padding: 20px;
     text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
