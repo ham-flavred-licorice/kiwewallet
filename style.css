@@ -1,167 +1,75 @@
-/* General Reset */
+/* General Settings */
 body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #393548; /* Dark Purple */
-  color: #d1d2d7; /* Light Gray for text */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* Gradients */
-.hero-gradient {
-  background: linear-gradient(135deg, #848cd9, #d18457, #ffd275, #6c6585); /* Blue, Peach, Yellow, Muted Purple */
+h1, h2 {
+    margin: 0;
 }
 
-.section-gradient {
-  background: linear-gradient(135deg, #848cd9, #6c6585, #d1d2d7); /* Periwinkle, Muted Purple, Light Gray */
+p {
+    line-height: 1.6;
 }
 
-.button-gradient {
- button {
-  background-color: #FF4500; /* Burnt Orange */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+/* Parallax Sections */
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-button:hover {
-  background-color: #E03D00; /* Darker Burnt Orange */
-  transform: scale(1.05);
+.parallax#home {
+    background-image: url('kiwe9.png'); /* Replace with your image */
 }
 
-
-/* Hero Section */
-.hero {
-header {
-  background: linear-gradient(135deg, #0074E8, #6A0DAD); /* Electric Blue to Purple */
-  color: white;
-  padding: 20px;
-  text-align: center;
+.parallax#mission {
+    background-image: url('kiwe7.png'); /* Replace with your image */
 }
 
-header h1 {
-  font-size: 2.5em;
+.parallax#rewards {
+    background-image: url('kiwe8.png'); /* Replace with your image */
 }
 
-header p {
-  font-size: 1.2em;
-  margin-top: 10px;
+.parallax#faq {
+    background-image: url('kiwe9.png'); /* Replace with your image */
 }
 
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* Section Styling */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-  color: #d1d2d7; /* Light Gray */
+.overlay h2, .overlay p {
+    color: white;
 }
 
-.section h2 {
-  font-size: 40px;
-  font-weight: bold;
-  background: linear-gradient(to right, #848cd9, #d18457); /* Periwinkle to Peach */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Content Sections */
+.content-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #F9F9F9;
+    color: #333;
 }
 
-.section p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-/* Features Section */
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 40px;
-}
-
-.features-grid .feature-card {
-  padding: 20px;
-  background: linear-gradient(135deg, #6c6585, #848cd9); /* Purple to Blue */
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  color: #d1d2d7; /* Light Gray */
-  text-align: center;
-}
-
-.features-grid .feature-card:hover {
-  transform: translateY(-5px);
-  transition: all 0.3s ease-in-out;
-}
-
-.features-grid .feature-card .icon {
-  font-size: 40px;
-  color: #ffd275; /* Yellow */
-  margin-bottom: 10px;
-}
-
-/* Comparison Table */
-.comparison-table {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 40px;
-  background: linear-gradient(120deg, #d18457, #848cd9);
-  color: #d1d2d7; /* Light Gray */
-  border-radius: 20px;
-}
-
-.comparison-table div {
-  padding: 20px;
-  background: #393548; /* Dark Purple */
-  border-radius: 10px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.comparison-table h3 {
-  margin: 0;
-  color: #848cd9; /* Periwinkle */
-  font-weight: bold;
-}
-
-/* FAQ Section */
-.faq {
-  padding: 40px;
-  background: linear-gradient(45deg, #848cd9, #6c6585);
-  color: #d1d2d7;
-  border-radius: 20px;
-}
-
-.faq-item {
-  margin-bottom: 20px;
-}
-
-.faq-item h4 {
-  margin-bottom: 10px;
-  color: #d18457; /* Peach */
-}
-
-.faq-item p {
-  margin: 0;
+.content-section h2 {
+    color: #5A1B9E;
 }
 
 /* Footer */
-.footer {
-  padding: 20px;
-  background: linear-gradient(135deg, #393548, #6c6585);
-  color: #d1d2d7;
-  text-align: center;
-}
-
-.footer a {
-  color: #d18457; /* Peach */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.footer a:hover {
-  text-decoration: underline;
+footer {
+    background-color: #5A1B9E;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
