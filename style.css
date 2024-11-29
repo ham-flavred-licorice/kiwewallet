@@ -1,36 +1,49 @@
 /* General Colors */
 :root {
-    --primary-color: #6A0DAD;
-    --accent-color: #04668D;
-    --secondary-color: #5A1B9E;
-    --background-color: #2C2C2C;
-    --text-color: #FFFFFF;
+    --primary-color: #6A0DAD; /* Primary Purple */
+    --accent-color: #04668D; /* Accent Blue */
+    --secondary-color: #5A1B9E; /* Secondary Deep Purple */
+    --background-color: #2C2C2C; /* Charcoal Gray */
+    --text-color: #FFFFFF; /* White */
 }
 
-/* Template Box for Readability */
-.template-box {
-    background-color: rgba(44, 44, 44, 0.8); /* Semi-transparent charcoal */
-    padding: 20px; /* Adds spacing inside the box */
-    border-radius: 10px; /* Smooth edges */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow */
-    text-align: center; /* Centers the text */
-    color: var(--text-color); /* White text for readability */
-    margin: 20px auto; /* Centers the box vertically and horizontally */
-    max-width: 800px; /* Restricts width for readability */
+/* Base Styles */
+body, html {
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    font-family: 'Roboto', sans-serif; /* Font styling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    background-color: var(--background-color); /* Global background color */
+    color: var(--text-color); /* Sets default text color */
+}
+
+/* Section Styling */
+section {
+    position: relative;
+    min-height: 75vh; /* Ensures sections take up 75% of the viewport */
+    display: flex; /* Centers content */
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+    padding: 40px 20px; /* Adds padding inside sections */
+    text-align: center; /* Centers text */
+}
+
+/* Semi-Transparent Template Box for Readability */
+.section-content {
+    background-color: rgba(44, 44, 44, 0.8); /* Charcoal with 80% opacity */
+    padding: 20px; /* Adds inner spacing */
+    border-radius: 10px; /* Smooth rounded edges */
+    max-width: 800px; /* Restricts width for better readability */
+    margin: 0 auto; /* Centers the content box */
+    color: var(--text-color); /* Ensures text is white and readable */
+    text-align: center; /* Centers the text horizontally */
 }
 
 /* Parallax Sections */
 .parallax {
-    height: 75vh;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--text-color);
+    background-attachment: fixed; /* Parallax scrolling effect */
+    background-size: cover; /* Ensures the background fills the container */
+    background-position: center; /* Centers the background image */
 }
 
 .parallax#home {
@@ -39,6 +52,10 @@
         rgba(106, 13, 173, 0.8),
         rgba(90, 27, 158, 0.8)
     );
+}
+
+.parallax#mission {
+    background-image: url('k4.png'); /* Mission section background */
 }
 
 .parallax#rewards {
@@ -50,14 +67,57 @@
 }
 
 .parallax#faq {
-    background-image: url('Pasted Graphic 1.png');
+    background-image: url('Pasted Graphic 1.png'); /* FAQ section background */
+}
+
+/* Text Styling */
+h1, h2 {
+    margin: 20px 0; /* Spacing above and below headings */
+    color: var(--text-color); /* White text */
+}
+
+p {
+    line-height: 1.6; /* Improves readability for paragraphs */
+}
+
+/* Features/Reusable Card Style */
+.feature {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle transparent background */
+    padding: 15px; /* Adds inner spacing */
+    border-radius: 10px; /* Smooth edges */
+    margin: 20px auto; /* Centers the card */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Buttons */
+.btn {
+    display: inline-block; /* Aligns buttons inline */
+    padding: 10px 20px; /* Adds inner padding */
+    background-color: var(--primary-color); /* Button background */
+    color: var(--text-color); /* Button text */
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px; /* Smooth edges */
+    transition: background-color 0.3s ease; /* Adds hover effect */
+}
+
+.btn:hover {
+    background-color: var(--accent-color); /* Changes color on hover */
 }
 
 /* Footer */
 footer {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    padding: 20px;
-    text-align: center;
-    font-size: 0.9rem;
+    background-color: var(--secondary-color); /* Footer background */
+    color: var(--text-color); /* Footer text color */
+    padding: 20px; /* Adds padding to footer */
+    text-align: center; /* Centers footer text */
+    font-size: 0.9rem; /* Adjusts text size */
+}
+
+footer a {
+    color: var(--accent-color); /* Footer link color */
+    text-decoration: none; /* Removes underline from links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
