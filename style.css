@@ -17,20 +17,22 @@ body, html {
 }
 
 .button-gradient {
-  background: linear-gradient(90deg, #6c6585, #848cd9); /* Purple to Blue */
-  border: none;
+ button {
+  background-color: #FF4500; /* Burnt Orange */
   color: white;
-  font-size: 16px;
+  border: none;
+  border-radius: 5px;
   padding: 10px 20px;
-  border-radius: 30px;
+  font-size: 1em;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out, background-color 0.3s;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.button-gradient:hover {
+button:hover {
+  background-color: #E03D00; /* Darker Burnt Orange */
   transform: scale(1.05);
-  background: linear-gradient(90deg, #848cd9, #ffd275); /* Adds yellow as hover highlight */
 }
+
 
 /* Hero Section */
 .hero {
