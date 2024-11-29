@@ -1,57 +1,75 @@
-body {
-    font-family: Arial, sans-serif;
+/* General Settings */
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Parallax Sections */
+.parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.parallax#home {
+    background-image: url('k4.png'); /* Replace with your image */
+}
+
+.parallax#mission {
+    background-image: url('Pasted Graphic 1.png'); /* Replace with your image */
+}
+
+.parallax#rewards {
+    background-image: url('rewards-bg.jpg'); /* Replace with your image */
+}
+
+.parallax#faq {
+    background-image: url('faq-bg.jpg'); /* Replace with your image */
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.overlay h2, .overlay p {
+    color: white;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #F9F9F9;
     color: #333;
 }
 
-header {
-    background-color: #0077cc;
-    color: white;
-    padding: 20px 10px;
-    text-align: center;
+.content-section h2 {
+    color: #5A1B9E;
 }
 
-header .tagline {
-    font-size: 1.2rem;
-    margin-top: 5px;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-section h2 {
-    color: #0077cc;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 10px;
-    padding-left: 15px;
-    position: relative;
-}
-
-ul li::before {
-    content: "✔";
-    color: #0077cc;
-    position: absolute;
-    left: 0;
-    font-weight: bold;
-}
-
+/* Footer */
 footer {
-    background-color: #333;
+    background-color: #5A1B9E;
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 10px 0;
 }
