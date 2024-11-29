@@ -63,9 +63,12 @@ p {
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 30px;
-    border-radius: 10px;
+    background-color: transparent; /* Remove background */
+    padding: 0; /* Optional: Adjust padding */
+    border-radius: 0; /* Remove rounded edges */
+    text-align: center; /* Center the text horizontally */
+}
+
 }
 
 .overlay h2, .overlay p {
