@@ -1,55 +1,141 @@
-/* Color Palette */
-:root {
-  --primary-gradient: linear-gradient(45deg, #5F9EA0, #4682B4);
-  --secondary-gradient: linear-gradient(45deg, #FFD700, #FFA500);
-  --text-color: #fff;
-}
-
-/* General Styles */
-body {
+/* General Reset */
+body, html {
   margin: 0;
+  padding: 0;
   font-family: 'Arial', sans-serif;
-  color: var(--text-color);
-  background: var(--primary-gradient);
+  background-color: #393548; /* Dark Purple */
+  color: #d1d2d7; /* Light Gray for text */
 }
 
-header.hero-section {
-  background-image: url('hero-bg.png');
-  background-size: cover;
+/* Gradients */
+.hero-gradient {
+  background: linear-gradient(135deg, #d18457, #ffd275, #d1d2d7, #848cd9); /* Peach to Yellow to Gray to Periwinkle */
+}
+
+.section-gradient {
+  background: linear-gradient(135deg, #848cd9, #6c6585, #ffd275); /* Periwinkle to Muted Purple to Yellow */
+}
+
+.button-gradient {
+  background: linear-gradient(90deg, #ffd275, #d18457); /* Yellow to Peach */
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button-gradient:hover {
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
   text-align: center;
-  color: var(--text-color);
   padding: 100px 20px;
+  color: #ffd275; /* Bright Yellow for hero text */
+  background: linear-gradient(180deg, #6c6585, #393548); /* Muted Purple to Dark Purple */
 }
 
-section {
+.hero h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color: #ffd275; /* Bright Yellow */
+}
+
+.hero p {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #d1d2d7; /* Light Gray */
+}
+
+/* Section Styling */
+.section {
   padding: 60px 20px;
+  text-align: center;
+  color: #d1d2d7; /* Light Gray */
 }
 
-.features .feature {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.section h2 {
+  font-size: 40px;
+  font-weight: bold;
+  background: linear-gradient(to right, #ffd275, #d18457);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Differentiators */
-.comparison {
+.section p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.icon {
+  font-size: 60px;
+  color: #ffd275; /* Bright Yellow for icons */
+}
+
+/* Comparison Table */
+.comparison-table {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  padding: 40px;
+  background: linear-gradient(120deg, #d18457, #848cd9);
+  color: #d1d2d7; /* Light Gray */
+  border-radius: 20px;
 }
 
-/* Buttons */
-button {
-  background: var(--secondary-gradient);
-  color: var(--text-color);
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
+.comparison-table div {
+  padding: 20px;
+  background: #393548; /* Dark Purple */
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.comparison-table h3 {
+  margin: 0;
+  color: #ffd275; /* Yellow */
+  font-weight: bold;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 40px;
+  background: linear-gradient(45deg, #ffd275, #6c6585);
+  color: #d1d2d7;
+  border-radius: 20px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h4 {
+  margin-bottom: 10px;
+  color: #ffd275; /* Yellow */
+}
+
+.faq-item p {
+  margin: 0;
 }
 
 /* Footer */
-footer {
+.footer {
+  padding: 20px;
+  background: linear-gradient(135deg, #393548, #6c6585);
+  color: #d1d2d7;
   text-align: center;
-  background: var(--primary-gradient);
+}
+
+.footer a {
+  color: #ffd275; /* Yellow */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
