@@ -10,17 +10,17 @@
 /* Base Styles */
 body, html {
     margin: 2;
-    padding: 6;
+    padding: 4;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
 }
 
 h1, h2 {
-    margin: 3;
+    margin: 2;
 }
 
 p {
-    line-height: 3.6;
+    line-height: 1.6;
 }
 
 /* Parallax Sections */
@@ -65,7 +65,7 @@ p {
 
 /* Content Sections */
 .content-section {
-    padding: 60px 20px;
+    padding: 40px 20px;
     text-align: center;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -77,17 +77,17 @@ p {
 
 ul {
     list-style-type: none;
-    padding: 2;
+    padding: 0;
 }
 
 ul li {
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 /* Footer */
 footer {
     background-color: var(--secondary-color);
     color: var(--text-color);
-    padding: 25px;
+    padding: 10px;
     text-align: center;
 }
