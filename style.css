@@ -1,143 +1,63 @@
 /* General Colors */
 :root {
-    --primary-color: #6A0DAD; /* Primary Purple */
-    --accent-color: #04668D; /* Accent Blue */
-    --secondary-color: #5A1B9E; /* Secondary Deep Purple */
-    --background-color: #2C2C2C; /* Charcoal Gray */
-    --text-color: #FFFFFF; /* White */
-    --transparent-overlay: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    --primary-color: #6A0DAD;
+    --accent-color: #04668D;
+    --secondary-color: #5A1B9E;
+    --background-color: #2C2C2C;
+    --text-color: #FFFFFF;
 }
 
-/* Base Styles */
-body, html {
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
-    font-family: 'Roboto', sans-serif;
-    scroll-behavior: smooth; /* Smooth scrolling */
-    background-color: var(--background-color); /* Sets a consistent background */
-    color: var(--text-color); /* Sets global text color */
-}
-
-h1, h2 {
-    margin: 20px 0; /* Adds spacing above and below headings */
-}
-
-p {
-    line-height: 1.6; /* Improves readability */
+/* Template Box for Readability */
+.template-box {
+    background-color: rgba(44, 44, 44, 0.8); /* Semi-transparent charcoal */
+    padding: 20px; /* Adds spacing inside the box */
+    border-radius: 10px; /* Smooth edges */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow */
+    text-align: center; /* Centers the text */
+    color: var(--text-color); /* White text for readability */
+    margin: 20px auto; /* Centers the box vertically and horizontally */
+    max-width: 800px; /* Restricts width for readability */
 }
 
 /* Parallax Sections */
 .parallax {
-    height: 75vh; /* Takes 75% of the viewport height */
-    background-attachment: fixed; /* Creates parallax effect */
-    background-size: cover; /* Ensures the image fills the space */
-    background-position: center; /* Centers the image */
-    position: relative; /* Allows overlay positioning */
-    display: flex; /* Centers text vertically */
-    align-items: center; /* Centers text vertically */
-    justify-content: center; /* Centers text horizontally */
-    text-align: center; /* Aligns text in the center */
-    color: var(--text-color); /* Sets text color */
+    height: 75vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-color);
 }
 
-@media (max-width: 768px) {
-    .parallax {
-        height: 50vh; /* Adjusts height for smaller screens */
-        background-attachment: scroll; /* Disables parallax on mobile for performance */
-    }
-}
-
-/* Specific Parallax Backgrounds */
 .parallax#home {
     background-image: linear-gradient(
         135deg,
-        rgba(106, 13, 173, 0.8), /* Transparent Primary Purple */
-        rgba(90, 27, 158, 0.8)   /* Transparent Secondary Purple */
+        rgba(106, 13, 173, 0.8),
+        rgba(90, 27, 158, 0.8)
     );
-}
-
-.parallax#mission {
-    background-image: url('k4.png'); /* Add your mission image */
 }
 
 .parallax#rewards {
     background-image: linear-gradient(
         135deg,
-        rgba(4, 102, 141, 0.8), /* Transparent Accent Blue */
-        rgba(90, 27, 158, 0.8)  /* Transparent Secondary Purple */
+        rgba(4, 102, 141, 0.8),
+        rgba(90, 27, 158, 0.8)
     );
 }
 
 .parallax#faq {
-    background-image: url('Pasted Graphic 1.png'); /* Add your FAQ image */
-}
-
-/* Overlay Styling */
-.overlay {
-    background-color: transparent; /* Removes background box */
-    padding: 0; /* Removes extra padding */
-    text-align: center; /* Centers text horizontally */
-}
-
-/* Content Sections */
-.content-section {
-    padding: 40px 20px; /* Adds consistent padding */
-    text-align: center; /* Centers all content */
-    background-color: var(--background-color); /* Matches the global background */
-    color: var(--text-color); /* Keeps text visible */
-}
-
-/* Features/Reusable Card Style */
-.feature {
-    background-color: rgba(255, 255, 255, 0.1); /* Adds a subtle transparent background */
-    margin: 20px auto; /* Centers the feature cards */
-    padding: 15px; /* Adds inner spacing */
-    border-radius: 10px; /* Rounds the edges */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
-}
-
-.feature h3 {
-    color: var(--accent-color); /* Highlights feature headings */
-}
-
-/* Buttons */
-.btn {
-    display: inline-block; /* Aligns the button inline */
-    padding: 10px 20px; /* Adds padding inside the button */
-    background-color: var(--primary-color); /* Sets the button color */
-    color: var(--text-color); /* Makes text visible */
-    text-decoration: none; /* Removes underline from links */
-    border-radius: 5px; /* Rounds the edges */
-    transition: background-color 0.3s ease; /* Adds hover effect */
-}
-
-.btn:hover {
-    background-color: var(--accent-color); /* Changes color on hover */
+    background-image: url('Pasted Graphic 1.png');
 }
 
 /* Footer */
 footer {
-    background-color: var(--secondary-color); /* Sets a consistent footer background */
-    color: var(--text-color); /* Ensures text is readable */
-    padding: 20px; /* Adds padding for spacing */
-    text-align: center; /* Centers all footer content */
-    font-size: 0.9rem; /* Adjusts footer text size */
-}
-
-footer a {
-    color: var(--accent-color); /* Highlights links in footer */
-    text-decoration: none; /* Removes underline */
-}
-
-footer a:hover {
-    text-decoration: underline; /* Adds underline on hover */
-}
-
-/* Additional Global Styles */
-section {
-    background-color: var(--background-color); /* Ensures no white backgrounds */
-}
-
-body > * {
-    background-color: var(--background-color); /* Fills any remaining white spots */
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
 }
