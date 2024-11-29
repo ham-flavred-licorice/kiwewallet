@@ -42,7 +42,7 @@ p {
 }
 
 .parallax#mission {
-    background-image: url('mission-bg.jpg'); /* Add your image */
+    background-image: url('kiwe9.png'); /* Add your image */
 }
 
 .parallax#rewards {
@@ -50,7 +50,7 @@ p {
 }
 
 .parallax#faq {
-    background-image: url('faq-bg.jpg'); /* Add your image */
+    background-image: url('kiwe8.png'); /* Add your image */
 }
 
 .overlay {
