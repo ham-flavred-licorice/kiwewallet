@@ -20,7 +20,7 @@ h1, h2 {
 }
 
 p {
-    line-height: 1.6;
+    line-height: 3.6;
 }
 
 /* Parallax Sections */
@@ -42,7 +42,7 @@ p {
 }
 
 .parallax#mission {
-    background-image: url('kiwe9.png'); /* Add your image */
+    background-image: url('kiwe7.png'); /* Add your image */
 }
 
 .parallax#rewards {
@@ -50,7 +50,7 @@ p {
 }
 
 .parallax#faq {
-    background-image: url('kiwe8.png'); /* Add your image */
+    background-image: url('k4.png'); /* Add your image */
 }
 
 .overlay {
