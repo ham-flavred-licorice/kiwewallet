@@ -34,22 +34,22 @@ body, html {
 
 /* Hero Section */
 .hero {
+header {
+  background: linear-gradient(135deg, #0074E8, #6A0DAD); /* Electric Blue to Purple */
+  color: white;
+  padding: 20px;
   text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(180deg, #848cd9, #393548); /* Blue to Dark Purple */
-  color: #d1d2d7; /* Light Gray */
 }
 
-.hero h1 {
-  font-size: 60px;
-  font-weight: bold;
-  color: #848cd9; /* Periwinkle */
+header h1 {
+  font-size: 2.5em;
 }
 
-.hero p {
-  font-size: 20px;
-  margin-top: 20px;
-  color: #ffd275; /* Yellow as an accent for subtext */
+header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
 }
 
 /* Section Styling */
