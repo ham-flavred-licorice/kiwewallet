@@ -1,8 +1,9 @@
 /* General Colors */
 :root {
-    --primary-color: #DA67AC; /*  */
+    --primary-color: #6A0DAD; /*  */
     --accent-color: #04668D; /* Pinkish */
     --secondary-color: #5A1B9E; /* Deep Purple */
+    --background-color: #2C2C2C; /* Charcoal Gray */
     --text-color: #FFFFFF; /* White */
 }
 
