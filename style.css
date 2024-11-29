@@ -1,116 +1,55 @@
-/* General */
+/* Color Palette */
+:root {
+  --primary-gradient: linear-gradient(45deg, #5F9EA0, #4682B4);
+  --secondary-gradient: linear-gradient(45deg, #FFD700, #FFA500);
+  --text-color: #fff;
+}
+
+/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    background-color: #1a1a1a;
-    scroll-behavior: smooth;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: var(--text-color);
+  background: var(--primary-gradient);
 }
 
-/* Hero Section */
-.hero {
-    background: linear-gradient(135deg, #ff8800, #ffcc00), url('k3.png') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    position: relative;
-    animation: fadeIn 3s ease-in-out;
+header.hero-section {
+  background-image: url('hero-bg.png');
+  background-size: cover;
+  text-align: center;
+  color: var(--text-color);
+  padding: 100px 20px;
 }
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    margin: 0;
+section {
+  padding: 60px 20px;
 }
 
-.hero-content p {
-    font-size: 1.8rem;
-    margin: 10px 0;
+.features .feature {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-.cta-button {
-    margin-top: 20px;
-    padding: 10px 30px;
-    font-size: 1.2rem;
-    color: #fff;
-    background: #ffcc00;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: transform 0.3s ease, background 0.3s ease;
+/* Differentiators */
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-.cta-button:hover {
-    transform: scale(1.1);
-    background: #ff8800;
-}
-
-/* Sections */
-.section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #ffcc00;
-}
-
-/* About & Mission Sections */
-.content-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-.section-image {
-    width: 45%;
-    max-width: 400px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Differentiators Section */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin: 0 auto;
-    padding: 0 10%;
-}
-
-.grid-item {
-    background: linear-gradient(135deg, #333, #444);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.grid-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
-}
-
-.grid-item i {
-    font-size: 2rem;
-    color: #ffcc00;
-    margin-bottom: 10px;
+/* Buttons */
+button {
+  background: var(--secondary-gradient);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 /* Footer */
-.footer {
-    background: linear-gradient(135deg, #333, #444);
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9rem;
-    color: #ffcc00;
+footer {
+  text-align: center;
+  background: var(--primary-gradient);
 }
