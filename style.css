@@ -1,123 +1,140 @@
 /* General Colors */
 :root {
-    --primary-color: #6A0DAD; /* Primary Purple */
-    --accent-color: #04668D; /* Accent Blue */
-    --secondary-color: #5A1B9E; /* Secondary Deep Purple */
-    --background-color: #2C2C2C; /* Charcoal Gray */
+    --primary-color: #6A0DAD; /* Primary color */
+    --accent-color: #04668D; /* Accent color */
+    --secondary-color: #5A1B9E; /* Secondary deep purple */
+    --background-color: #2C2C2C; /* Charcoal gray */
     --text-color: #FFFFFF; /* White */
 }
 
 /* Base Styles */
 body, html {
-    margin: 0; /* Removes default margin */
-    padding: 0; /* Removes default padding */
-    font-family: 'Roboto', sans-serif; /* Font styling */
-    scroll-behavior: smooth; /* Smooth scrolling */
-    background-color: var(--background-color); /* Global background color */
-    color: var(--text-color); /* Sets default text color */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-/* Section Styling */
-section {
-    position: relative;
-    min-height: 75vh; /* Ensures sections take up 75% of the viewport */
-    display: flex; /* Centers content */
-    align-items: center; /* Vertically centers content */
-    justify-content: center; /* Horizontally centers content */
-    padding: 40px 20px; /* Adds padding inside sections */
-    text-align: center; /* Centers text */
+h1, h2 {
+    margin: 20px 0;
 }
 
-/* Semi-Transparent Template Box for Readability */
-.section-content {
-    background-color: rgba(44, 44, 44, 0.8); /* Charcoal with 80% opacity */
-    padding: 20px; /* Adds inner spacing */
-    border-radius: 10px; /* Smooth rounded edges */
-    max-width: 800px; /* Restricts width for better readability */
-    margin: 0 auto; /* Centers the content box */
-    color: var(--text-color); /* Ensures text is white and readable */
-    text-align: center; /* Centers the text horizontally */
+p {
+    line-height: 1.6;
 }
 
 /* Parallax Sections */
 .parallax {
-    background-attachment: fixed; /* Parallax scrolling effect */
-    background-size: cover; /* Ensures the background fills the container */
-    background-position: center; /* Centers the background image */
+    height: 75vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        height: 50vh;
+        background-attachment: scroll;
+    }
 }
 
 .parallax#home {
-    background-image: linear-gradient(
-        135deg,
-        rgba(106, 13, 173, 0.8),
-        rgba(90, 27, 158, 0.8)
-    );
+    background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
 }
 
 .parallax#mission {
-    background-image: url('k4.png'); /* Mission section background */
+    background-image: url('k4.png'); /* Add your image */
 }
 
 .parallax#rewards {
-    background-image: linear-gradient(
-        135deg,
-        rgba(4, 102, 141, 0.8),
-        rgba(90, 27, 158, 0.8)
-    );
+    background-image: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
 }
 
 .parallax#faq {
-    background-image: url('Pasted Graphic 1.png'); /* FAQ section background */
+    background-image: url('Pasted Graphic 1.png'); /* Add your image */
 }
 
-/* Text Styling */
-h1, h2 {
-    margin: 20px 0; /* Spacing above and below headings */
-    color: var(--text-color); /* White text */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
 }
 
-p {
-    line-height: 1.6; /* Improves readability for paragraphs */
+.overlay h2, .overlay p {
+    color: var(--text-color);
 }
 
-/* Features/Reusable Card Style */
+/* Content Sections */
+.content-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.content-section h2 {
+    color: var(--accent-color);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Feature Cards */
 .feature {
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle transparent background */
-    padding: 15px; /* Adds inner spacing */
-    border-radius: 10px; /* Smooth edges */
-    margin: 20px auto; /* Centers the card */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+    color: var(--accent-color);
 }
 
 /* Buttons */
 .btn {
-    display: inline-block; /* Aligns buttons inline */
-    padding: 10px 20px; /* Adds inner padding */
-    background-color: var(--primary-color); /* Button background */
-    color: var(--text-color); /* Button text */
-    text-decoration: none; /* Removes underline */
-    border-radius: 5px; /* Smooth edges */
-    transition: background-color 0.3s ease; /* Adds hover effect */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: var(--accent-color); /* Changes color on hover */
+    background-color: var(--accent-color);
 }
 
 /* Footer */
 footer {
-    background-color: var(--secondary-color); /* Footer background */
-    color: var(--text-color); /* Footer text color */
-    padding: 20px; /* Adds padding to footer */
-    text-align: center; /* Centers footer text */
-    font-size: 0.9rem; /* Adjusts text size */
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
 }
 
 footer a {
-    color: var(--accent-color); /* Footer link color */
-    text-decoration: none; /* Removes underline from links */
+    color: var(--accent-color);
+    text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline; /* Underline on hover */
+    text-decoration: underline;
 }
